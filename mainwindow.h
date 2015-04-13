@@ -6,6 +6,7 @@
 //TEST KOMMENTAR
 //test 2
 // blabla xxxxxxxxxxxxxxxxx
+// XX
 
 namespace Ui {
 class MainWindow;
