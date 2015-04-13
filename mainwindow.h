@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 
+//TEST KOMMENTAR
+//test 2
+
 namespace Ui {
 class MainWindow;
 }
