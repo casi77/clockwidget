@@ -18,6 +18,7 @@ Todo
 - Nachricht Aufschlüsseln
     - Abhängig von ANA oder DIG Signal abschicken?
         - Neues Fenster mit Dynamischen QML öffnen
+        -  Lasst uns einen digitalen und analogen Tacho bauen und gut ist
 
 Vorsicht!!
 - Keine Fehlerüberprüfung bei Eingaben!
@@ -25,3 +26,5 @@ Vorsicht!!
 - Nix Errorhandling - yoyo! :P
 
 Iwann grauen wir die Elemente aus, die man zu bestimmten Zeitpunkten nicht nutzen sollte. :)
+
+
