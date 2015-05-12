@@ -6,6 +6,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    ui->DigitalChanger->setEnabled(false);
+    ui->AnalogChanger->setEnabled(false);
 }
 
 MainWindow::~MainWindow()
@@ -19,6 +22,9 @@ void MainWindow::on_btn_ClientConnect_clicked()
     QString clientIP = ui->client_inputIP->text();
 
     client.initSocket(QHostAddress(clientIP), clientPort);
+
+    ui->client_inputIP->setEnabled(false);
+    ui->client_inputPort->setEnabled(false);
 }
 
 void MainWindow::on_btn_ServerStart_clicked()
@@ -28,6 +34,12 @@ void MainWindow::on_btn_ServerStart_clicked()
 
     server.initSocket(QHostAddress(serverIP), serverPort);
     //server.sendDatagramm("TESTTEST", QHostAddress(serverIP), serverPort);
+
+    ui->serv_inputIP->setEnabled(false);
+    ui->serv_inputPort->setEnabled(false);
+
+    ui->AnalogChanger->setEnabled(true);
+    ui->DigitalChanger->setEnabled(true);
 }
 
 void MainWindow::on_DigitalChanger_actionTriggered(int action)

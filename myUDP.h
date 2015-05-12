@@ -12,6 +12,7 @@ public:
     explicit MyUDP(QObject *parent = 0);
     void sendDatagramm(QString myData, QHostAddress host, int port);
     void initSocket(QHostAddress host, int port);
+    void decodeInput(QString input);
 
 signals:
 

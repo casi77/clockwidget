@@ -52,4 +52,26 @@ void MyUDP::readyRead()
     //qDebug() << "Message: " << buffer;
 
     qDebug() << "Message recived: " << buffer;
+
+    decodeInput(buffer);
+}
+
+void MyUDP::decodeInput(QString input)
+{
+    qDebug() << "Decode Input";
+
+    QString anaString = "ANA";
+    QString digString = "DIG";
+
+    qDebug() << input;
+    qDebug() << input.indexOf(anaString);
+
+    if (input.indexOf(anaString) != -1)
+    {
+        qDebug() <<  "ANA FOUND ";
+    }
+    if (input.indexOf(digString) != -1)
+    {
+        qDebug() <<  "DIG FOUND ";
+    }
 }
