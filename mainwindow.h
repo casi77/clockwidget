@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QQuickView>
 #include "myudp.h"
 
 namespace Ui {
@@ -27,6 +28,10 @@ private:
     Ui::MainWindow *ui;
     MyUDP client;
     MyUDP server;
+    QUrl digitalQML;
+    QUrl analogueQML;
+    QQuickView *view;
+    QWidget *container;
 };
 
 #endif // MAINWINDOW_H

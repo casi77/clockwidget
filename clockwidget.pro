@@ -6,12 +6,13 @@
 
 QT       += core gui
 QT       += network
+QT       += qml
+QT       += quick
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = clockwidget
 TEMPLATE = app
-
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -24,3 +25,7 @@ FORMS    += mainwindow.ui
 
 DISTFILES += \
     ReadMe.txt
+
+OTHER_FILES += \
+    digital.qml
+
