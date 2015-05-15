@@ -58,6 +58,7 @@ void MyUDP::readyRead()
 
 void MyUDP::decodeInput(QString input)
 {
+    int value;
 
     qDebug() << "Decode Input";
 
@@ -67,14 +68,14 @@ void MyUDP::decodeInput(QString input)
     qDebug() << input;
     qDebug() << input.indexOf(anaString);
 
-    if (input.indexOf(anaString) != -1)
+    if (input.indexOf("DIG") != -1)
     {
-        qDebug() <<  "ANA FOUND ";
-
+        value = input.mid(5, input.length()-1).toInt();
+        qDebug() << "Decoded: " << "DIG" << " & " << "value: " << value;
     }
-    if (input.indexOf(digString) != -1)
-
+    if (input.indexOf("ANA") != -1)
     {
-        qDebug() <<  "DIG FOUND ";
+        value = input.mid(5, input.length()-1).toInt();
+        qDebug() << "Decoded: " << "ANA" << " & " << "value: " << value;
     }
 }
