@@ -14,6 +14,9 @@ MainWindow::MainWindow(QWidget *parent) :
     container = QWidget::createWindowContainer(view, this);
 
     digitalQML = QUrl("digital.qml");
+    view->setSource(digitalQML);
+    ui->verticalLayout->addWidget(container);
+
 
 }
 
@@ -48,15 +51,14 @@ void MainWindow::on_btn_ServerStart_clicked()
     ui->AnalogChanger->setEnabled(true);
     ui->DigitalChanger->setEnabled(true);
 
-        view->setSource(digitalQML);
-        ui->verticalLayout->addWidget(container);
+        //view->setSource(digitalQML);
+        //ui->verticalLayout->addWidget(container);
         view->setProperty("value", "hallo");
         qDebug() << view->property("value");
 
+        view->update();
+
         container->repaint();
-
-
-
 }
 
 void MainWindow::on_DigitalChanger_actionTriggered(int action)
