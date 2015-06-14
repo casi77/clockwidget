@@ -13,11 +13,13 @@ MainWindow::MainWindow(QWidget *parent) :
     view = new QQuickView();
     container = QWidget::createWindowContainer(view, this);
 
-    digitalQML = QUrl("digital.qml");
-    view->setSource(digitalQML);
+    //Because qrc:// is the URL prefix, / is the root prefix, digital.qml is the file inside it.
+    digitalQML = QUrl("qrc:///digital/digital.qml");
+
+    analogueQML = QUrl("qrc:///analogue/analogue.qml");
+
+    view->setSource(analogueQML);
     ui->verticalLayout->addWidget(container);
-
-
 }
 
 MainWindow::~MainWindow()
@@ -69,4 +71,5 @@ void MainWindow::on_DigitalChanger_actionTriggered(int action)
 void MainWindow::on_AnalogChanger_actionTriggered(int action)
 {
     server.sendDatagramm("$ANA," + QString::number(ui->AnalogChanger->value()), QHostAddress(ui->serv_inputIP->text()), ui->serv_inputPort->text().toInt());
+    ui->verticalLayout->setProperty("needleAngle", ui->AnalogChanger->value());
 }

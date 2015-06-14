@@ -6,8 +6,7 @@
 
 QT       += core gui
 QT       += network
-QT       += qml
-QT       += quick
+QT       += qml quick
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,6 +25,9 @@ FORMS    += mainwindow.ui
 DISTFILES += \
     ReadMe.txt
 
-OTHER_FILES += \
-    digital.qml
+#OTHER_FILES += \
+#    digital.qml
+
+RESOURCES += \
+    resource.qrc
 
