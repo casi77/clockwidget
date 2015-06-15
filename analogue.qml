@@ -2,8 +2,7 @@ import QtQuick 2.0
 
 Image {
     id: root
-    property double needleAngle : 0
-
+    property double value : 0
     //width: 210; height: 210 //why?!
 
     Image {
@@ -17,12 +16,13 @@ Image {
 
     Image {
         id: needle
-        x: 100
-        y: 67
-        width: 200
+        x: 128
+        y: 100
+        width: 184
         height: 200
+        rotation: value;
+        //clip: false
         source: "needle.png"
-        transform: Rotation{origin.x:164; origin.y:22; angle: needleAngle}
         smooth: true
     }
 
