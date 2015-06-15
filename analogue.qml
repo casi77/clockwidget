@@ -50,7 +50,7 @@ Image {
         x: 0
         y: 0
         text: value
-        font.family: courir
+        font.family: courier
         horizontalAlignment: Text.AlignRight
         styleColor: "#000000"
         font.pointSize: 12
