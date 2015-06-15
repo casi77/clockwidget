@@ -6,13 +6,13 @@ import QtQuick 2.0
         property string value: ""
         x: 0
         y: 0
-        width: 200
-        height: 200
+        width: 300
+        height: 185
 
         Text {
-            x: 0
-            y: 0
-            text: "Welcome to my <br> fucking shit crap <br> scum bicthy program"
+            x: 20
+            y: 79
+            text: "No value received!"
             font.pointSize: 18
             font.family: "Courier"
         }

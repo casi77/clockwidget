@@ -7,85 +7,20 @@
     <x>0</x>
     <y>0</y>
     <width>480</width>
-    <height>716</height>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Client</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>30</y>
-      <width>171</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Connection setting</string>
-    </property>
-    <widget class="QLineEdit" name="client_inputIP">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>20</y>
-       <width>113</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>127.0.0.1</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="client_inputPort">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>50</y>
-       <width>113</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>1234</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>50</y>
-       <width>21</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Port:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>21</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>IP:</string>
-     </property>
-    </widget>
-   </widget>
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
+      <x>20</x>
+      <y>320</y>
       <width>441</width>
-      <height>111</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="title">
@@ -95,7 +30,7 @@
      <property name="geometry">
       <rect>
        <x>350</x>
-       <y>80</y>
+       <y>40</y>
        <width>75</width>
        <height>23</height>
       </rect>
@@ -104,12 +39,51 @@
       <string>Connect</string>
      </property>
     </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Listen to:</string>
+     </property>
+     <widget class="QLineEdit" name="client_inputPort">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1234</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Port:</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>150</y>
+      <x>20</x>
+      <y>10</y>
       <width>441</width>
       <height>251</height>
      </rect>
@@ -153,12 +127,12 @@
       </rect>
      </property>
      <property name="title">
-      <string>Connection setting</string>
+      <string>Send to:</string>
      </property>
      <widget class="QLineEdit" name="serv_inputIP">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>50</x>
         <y>20</y>
         <width>113</width>
         <height>20</height>
@@ -171,7 +145,7 @@
      <widget class="QLineEdit" name="serv_inputPort">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>50</x>
         <y>50</y>
         <width>113</width>
         <height>20</height>
@@ -186,7 +160,7 @@
        <rect>
         <x>10</x>
         <y>50</y>
-        <width>21</width>
+        <width>31</width>
         <height>16</height>
        </rect>
       </property>
@@ -247,22 +221,40 @@
       </property>
      </widget>
     </widget>
+    <zorder>groupBox_2</zorder>
+    <zorder>groupBox_5</zorder>
+    <zorder>btn_ServerStart</zorder>
+    <zorder>groupBox_6</zorder>
+    <zorder>groupBox_3</zorder>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>19</x>
-      <y>410</y>
-      <width>441</width>
-      <height>291</height>
+      <x>50</x>
+      <y>400</y>
+      <width>381</width>
+      <height>181</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout"/>
    </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>461</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
    <zorder>groupBox_4</zorder>
    <zorder>groupBox_3</zorder>
-   <zorder>groupBox</zorder>
    <zorder>verticalLayoutWidget</zorder>
+   <zorder>line</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

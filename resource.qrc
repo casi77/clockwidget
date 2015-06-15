@@ -10,4 +10,7 @@
     <qresource prefix="/empty">
         <file>empty.qml</file>
     </qresource>
+    <qresource prefix="/fonts">
+        <file>digital-7.ttf</file>
+    </qresource>
 </RCC>

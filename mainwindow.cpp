@@ -32,8 +32,9 @@ void MainWindow::on_btn_ClientConnect_clicked(){
 
     client.initSocket(clientPort);
 
-    ui->client_inputIP->setEnabled(false);
     ui->client_inputPort->setEnabled(false);
+    ui->btn_ClientConnect->setEnabled(false);
+
 
     connect(&client, SIGNAL(valueReceived(int)), this, SLOT(on_valueReceived(int)));
     connect(&client, SIGNAL(viewReceived(QString)), this, SLOT(on_viewReceived(QString)));
