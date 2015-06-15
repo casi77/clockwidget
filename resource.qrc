@@ -13,4 +13,7 @@
     <qresource prefix="/fonts">
         <file>digital-7.ttf</file>
     </qresource>
+    <qresource prefix="/makeFile">
+        <file>CMakeLists.txt</file>
+    </qresource>
 </RCC>

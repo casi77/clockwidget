@@ -24,7 +24,6 @@ import QtQuick 2.0
             }
             else {
                 textValue.color = "red";
-
             }
             oldValue = value;
         }
