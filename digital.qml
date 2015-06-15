@@ -19,7 +19,7 @@ import QtQuick 2.0
         border.color: "#000000"
 
         onValueChanged: {
-            if(oldValue <= value) {
+            if(parseInt(oldValue) <= parseInt(value)) {
                 textValue.color = "#31f311";
             }
             else {

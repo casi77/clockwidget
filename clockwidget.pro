@@ -27,9 +27,6 @@ FORMS    += mainwindow.ui
 DISTFILES += \
     ReadMe.txt
 
-#OTHER_FILES += \
-#    digital.qml
-
 RESOURCES += \
     resource.qrc
 
