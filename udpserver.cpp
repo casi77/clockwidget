@@ -5,18 +5,23 @@ UdpServer::UdpServer(QObject *parent) :
      qDebug() << "UDP Server Object created";
 }
 
-void UdpServer::initSocket(){
+QAbstractSocket::SocketState UdpServer::initSocket(){
     // create a QUDP socket
     socket = new QUdpSocket(this);
 
     qDebug() << "Server Socket initialisiert: ";
+
+    return socket->state();
 }
 
-void UdpServer::sendDatagramm(QString myData, QHostAddress host, int port){
+qint64 UdpServer::sendDatagramm(QString myData, QHostAddress host, int port){
     QByteArray data;
+    qint64 returnValue;
     data.append(myData);
 
     // Sends the datagram datagram to the host address and at port.
-    socket->writeDatagram(data, host, port);
+    returnValue = socket->writeDatagram(data, host, port);
     //qDebug() << "Message send: " << data;
+
+    return returnValue;
 }

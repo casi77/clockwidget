@@ -10,8 +10,8 @@ class UdpServer : public QObject
     Q_OBJECT
 public:
     explicit UdpServer(QObject *parent = 0);
-    void sendDatagramm(QString myData, QHostAddress host, int port);
-    void initSocket();
+    qint64 sendDatagramm(QString myData, QHostAddress host, int port);
+    QAbstractSocket::SocketState initSocket();
 
 private:
     QUdpSocket *socket;

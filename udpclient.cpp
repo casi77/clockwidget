@@ -5,7 +5,7 @@ UdpClient::UdpClient(QObject *parent) :
      qDebug() << "UDP Client Object created";
 }
 
-void UdpClient::initSocket(quint16 port){
+ QAbstractSocket::SocketState UdpClient::initSocket(quint16 port){
     // create a QUDP socket
     socket = new QUdpSocket(this);
 
@@ -15,6 +15,8 @@ void UdpClient::initSocket(quint16 port){
     connect(socket, SIGNAL(readyRead()),
             this, SLOT(readPendingDatagrams()));
     qDebug() << "Client Socket initialisiert: " << socket->state();
+
+    return socket->state();
 }
 
 void UdpClient::readPendingDatagrams(){
@@ -34,8 +36,8 @@ void UdpClient::readPendingDatagrams(){
     }
 }
 
-void UdpClient::decodeInput(QString input){
-    int value;
+int UdpClient::decodeInput(QString input){
+    int value = 0;
 
     //qDebug() << "Decode Input";
 
@@ -69,5 +71,7 @@ void UdpClient::decodeInput(QString input){
 
         emit valueReceived(value);
     }
+    qDebug() << "Decode Value: " << value;
+    return value;
 }
 
