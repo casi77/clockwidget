@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include <QQuickView>
-//#include "myudp.h"
 #include "udpclient.h"
 #include "udpserver.h"
 
@@ -25,6 +24,9 @@ private slots:
 
     void on_DigitalChanger_actionTriggered(int action);
     void on_AnalogChanger_actionTriggered(int action);
+
+    void on_btn_ClientDisconnect_clicked();
+    void on_btn_ServerEnd_clicked();
 
 public slots:
     void on_valueReceived(int value);

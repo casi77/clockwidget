@@ -12,6 +12,7 @@ public:
     explicit UdpServer(QObject *parent = 0);
     qint64 sendDatagramm(QString myData, QHostAddress host, int port);
     QAbstractSocket::SocketState initSocket();
+    ~UdpServer();
 
 private:
     QUdpSocket *socket;

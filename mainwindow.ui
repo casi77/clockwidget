@@ -29,7 +29,7 @@
     <widget class="QPushButton" name="btn_ClientConnect">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>280</x>
        <y>40</y>
        <width>75</width>
        <height>23</height>
@@ -77,6 +77,19 @@
        <string>Port:</string>
       </property>
      </widget>
+    </widget>
+    <widget class="QPushButton" name="btn_ClientDisconnect">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>40</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Disconnect</string>
+     </property>
     </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_4">
@@ -185,7 +198,7 @@
     <widget class="QPushButton" name="btn_ServerStart">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>280</x>
        <y>80</y>
        <width>75</width>
        <height>23</height>
@@ -221,11 +234,19 @@
       </property>
      </widget>
     </widget>
-    <zorder>groupBox_2</zorder>
-    <zorder>groupBox_5</zorder>
-    <zorder>btn_ServerStart</zorder>
-    <zorder>groupBox_6</zorder>
-    <zorder>groupBox_3</zorder>
+    <widget class="QPushButton" name="btn_ServerEnd">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>80</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>End</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">

@@ -12,6 +12,8 @@ public:
     explicit UdpClient(QObject *parent = 0);
     QAbstractSocket::SocketState initSocket(quint16 port);
     int decodeInput(QString input);
+    QAbstractSocket::SocketState disconnect();
+    ~UdpClient();
 
 signals:
     void valueReceived(int value);
@@ -22,7 +24,7 @@ public slots:
 
 private:
     QUdpSocket *socket;
-    QString oldView;
+    QString oldView;  //prevents view flicker
 };
 
 #endif // UDPCLIENT
